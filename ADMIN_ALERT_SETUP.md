@@ -211,6 +211,32 @@ def notify_admin_of_signup(user_email, user_name, details):
     return response.json()
 ```
 
+## Render Deployment
+
+For Render, use the email service root folder `backend/email-service` and set the service to start with:
+
+```bash
+uvicorn main:app --host 0.0.0.0 --port $PORT
+```
+
+### Render environment variables
+
+Set these env vars in Render for the email service:
+
+```env
+RESEND_API_KEY=your_resend_api_key
+FROM_EMAIL=rnd@analyticsavenue.in
+ADMIN_EMAIL=ceo@analyticsavenue.in
+WEBSITE_URL=https://www.analyticsavenue.in
+LOG_LEVEL=INFO
+```
+
+### Notes
+
+- `RESEND_API_KEY` must remain on the backend only.
+- `VITE_ADMIN_EMAIL` is only for frontend/local use and does not affect Render backend startup.
+- The command above uses `$PORT` so Render can assign the correct port automatically.
+
 ## Troubleshooting
 
 ### Admin alert not being received
