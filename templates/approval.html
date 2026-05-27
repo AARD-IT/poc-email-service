@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Account Approved</title>
+    <style>
+      body{font-family:Arial,Helvetica,sans-serif;color:#222;margin:0;padding:0}
+      .container{max-width:600px;margin:24px auto;padding:24px;border:1px solid #eaeaea}
+      .header{background:#0b5fff;color:#fff;padding:16px;text-align:center}
+      .content{padding:16px}
+      .footer{font-size:12px;color:#666;margin-top:20px}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header"><h1>Account Approved</h1></div>
+      <div class="content">
+        <p>Hi {{ name }},</p>
+        <p>Your account has been approved by {{ approved_by }}. You can now access the platform.</p>
+        <p><a href="{{ website_url }}">Go to Analytics Avenue</a></p>
+        <p class="footer">If you have questions, reply to this email.</p>
+      </div>
+    </div>
+  </body>
+</html>
