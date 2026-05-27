@@ -59,6 +59,8 @@ class ResendService:
                         subject=subject,
                         html=html,
                     )
+                    # Log the raw response for debugging/delivery inspection
+                    logger.info("Resend send response: %r", resp)
                 elif hasattr(self.client, "send"):
                     resp = self.client.send(
                         params={
@@ -68,6 +70,8 @@ class ResendService:
                             "html": html,
                         }
                     )
+                    # Log the raw response for debugging/delivery inspection
+                    logger.info("Resend send response: %r", resp)
                 else:
                     raise AttributeError("Resend client does not expose a send method")
                 return {"ok": True, "response": resp}
