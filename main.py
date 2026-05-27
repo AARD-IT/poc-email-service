@@ -68,6 +68,11 @@ app.add_middleware(
 )
 
 
+@app.get("/")
+async def root():
+    return {"status": "Backend Connected Successfully"}
+
+
 @app.get("/health")
 async def health():
     return {"status": "ok"}
