@@ -227,7 +227,7 @@ Set these env vars in Render for the email service:
 RESEND_API_KEY=your_resend_api_key
 FROM_EMAIL=rnd@analyticsavenue.in
 ADMIN_EMAIL=ceo@analyticsavenue.in
-WEBSITE_URL=https://www.analyticsavenue.in
+WEBSITE_URL=https://www.analyticsavenuerd.in
 LOG_LEVEL=INFO
 ```
 
